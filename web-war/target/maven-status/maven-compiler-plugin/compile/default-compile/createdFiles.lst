@@ -1,0 +1,5 @@
+com/shop/user/controller/UserController.class
+com/shop/user/service/UserService.class
+com/shop/user/dao/UserDao.class
+com/shop/controller/CommonController.class
+com/shop/controller/ManageController.class

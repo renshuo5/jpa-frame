@@ -1,0 +1,4 @@
+com/rensframework/core/entity/ContainerComponent.class
+com/rens/InitServlet.class
+com/rensframework/core/spring/ContainerComponentConverter.class
+com/rensframework/core/entity/Component.class

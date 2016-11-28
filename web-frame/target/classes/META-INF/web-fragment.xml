@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:webfragment="http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd"
+	version="3.0">
+
+	<!-- test -->
+	<servlet>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>com.rens.InitServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InitServlet</servlet-name>
+		<url-pattern>/InitServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:META-INF/config/spring-*.xml</param-value>
+	</context-param>
+	
+	<listener>  
+	    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
+	</listener>
+	
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>   
+		<param-value>classpath*:META-INF/logback.xml</param-value>  
+	</context-param>
+	
+	<listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+ 	</listener>
+ 	<servlet>
+	 	<servlet-name>springmvc</servlet-name>
+	 	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	 	<init-param>
+	 		<param-name>contextConfigLocation</param-name>
+	 		<param-value>classpath*:META-INF/config/springmvc-*.xml</param-value>
+	 	</init-param>
+	 	<load-on-startup>1</load-on-startup>
+ 	</servlet>
+ 	<!--为DispatcherServlet建映射 -->
+ 	<servlet-mapping>
+ 		<servlet-name>springmvc</servlet-name>
+ 		<url-pattern>/</url-pattern>
+ 	</servlet-mapping>
+ 	<!-- 设置编码为UTF-8 -->
+ 	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<async-supported>true</async-supported>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<!-- <dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher> -->
+	</filter-mapping>
+	
+	<!-- 设置隐藏的method可以为方法 -->
+ 	<filter>
+ 		<filter-name>httpMethodFilter</filter-name>
+ 		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+ 	</filter>
+ 	<filter-mapping>
+ 		<filter-name>httpMethodFilter</filter-name>
+ 		<url-pattern>/*</url-pattern>
+ 	</filter-mapping>
+ 	<!-- 设置可以接收put方法 -->
+ 	<filter>
+ 		<filter-name>putMethodFilter</filter-name>
+ 		<filter-class>org.springframework.web.filter.HttpPutFormContentFilter</filter-class>
+ 		<async-supported>true</async-supported>
+ 	</filter>
+ 	<filter-mapping>
+ 		<filter-name>putMethodFilter</filter-name>
+ 		<servlet-name>springmvc</servlet-name>
+ 	</filter-mapping>
+
+</web-fragment>

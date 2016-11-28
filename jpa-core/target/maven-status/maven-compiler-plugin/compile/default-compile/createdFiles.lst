@@ -1,0 +1,9 @@
+com/rensframework/core/service/BaseService.class
+com/rensframework/core/entity/user/Role.class
+com/rensframework/core/entity/Entity.class
+com/rensframework/core/entity/BaseEntity.class
+com/rensframework/core/entity/Auditable.class
+com/rensframework/core/entity/user/Permission.class
+com/rensframework/core/entity/listener/TimeEntityListener.class
+com/rensframework/core/entity/TimeEntity.class
+com/rensframework/core/entity/user/User.class
