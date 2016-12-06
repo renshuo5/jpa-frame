@@ -1,1 +1,2 @@
 com/rens/UserInitServlet.class
+com/rensframework/shiro/ShiroDbRealm.class
