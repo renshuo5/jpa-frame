@@ -147,7 +147,8 @@
 			</bean>
 		</property>
 	</bean>
-
+	<bean id="sessionFactory" factory-bean="entityManagerFactory" factory-method="getSessionFactory" />
+	
 	<bean id="sharedEntityManager"
 		class="org.springframework.orm.jpa.support.SharedEntityManagerBean">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
