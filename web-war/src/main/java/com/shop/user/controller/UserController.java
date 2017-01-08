@@ -42,7 +42,7 @@ public class UserController {
 
 	@RequestMapping(method=RequestMethod.GET)
 	public String index(User user,Model model){
-		
+		System.out.println("list");
 		return "user/list";
 	}
 	
