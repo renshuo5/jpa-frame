@@ -107,6 +107,13 @@
         <!-- 当模板路径为多个时，加入此属性，否则报错，提示找不到templateLoaderPaths，ftl模板路径 -->
         <property name="preferFileSystemAccess" value="false" />
     </bean>
+    
+    <mvc:interceptors>
+    	<bean class="org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor">
+    		<property name="entityManagerFactory" ref="entityManagerFactory" />
+    	</bean>
+    </mvc:interceptors>
+    
     <!-- 视图解释器   -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">  
         <property name="viewClass"  

@@ -24,11 +24,13 @@
   		<artifactId>jpa-core</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+  	<!--
   	<dependency>
   		<groupId>com.rens.jpa</groupId>
   		<artifactId>user-frame</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+  	--> 
   	<!-- mysql驱动-->  
     <dependency>  
         <groupId>mysql</groupId>  

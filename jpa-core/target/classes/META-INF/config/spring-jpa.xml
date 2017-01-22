@@ -41,6 +41,11 @@
 			</bean>
 		</property>
 	</bean>
+	
+	<bean id="renshuo" class="com.rensframework.core.spring.SysCommon">
+		<property name="name" value="任硕" />
+		<property name="age" value="26" />
+	</bean>
 	 
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
 		destroy-method="close">
@@ -147,7 +152,8 @@
 			</bean>
 		</property>
 	</bean>
-
+	<bean id="sessionFactory" factory-bean="entityManagerFactory" factory-method="getSessionFactory" />
+	
 	<bean id="sharedEntityManager"
 		class="org.springframework.orm.jpa.support.SharedEntityManagerBean">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />

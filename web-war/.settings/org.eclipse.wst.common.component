@@ -13,9 +13,6 @@
         <dependent-module archiveName="rens-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/rens-common/rens-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="user-frame-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/user-frame/user-frame">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="web-war"/>
         <property name="java-output-path" value="/web-war/target/classes"/>
     </wb-module>

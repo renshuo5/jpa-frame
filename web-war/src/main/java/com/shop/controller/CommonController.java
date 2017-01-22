@@ -17,15 +17,15 @@ public class CommonController {
 	@ModelAttribute(ATTR_LOGIN_USER)
 	public User loginUser(Model model){
 		logger.info("common");
-//		if (true) {
+		if (false) {
 			User user = new User();
 			user.setAccount("renshuo");
 			user.setCellphone("15101640992");
 			user.setEmail("825558984@qq.com");
 			user.setName("任硕");
 			return user;
-//		} else {
-//			return null;
-//		}
+		} else {
+			return null;
+		}
 	}
 }

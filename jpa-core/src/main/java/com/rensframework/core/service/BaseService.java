@@ -61,16 +61,7 @@ public abstract class BaseService<T extends Entity> {
 
 	public T getForUpdate(Long id) {
 		T t = (T) getDao().findOne(id);
-		if (t instanceof Auditable) {
-			try {
-				T orig = (T) BeanUtils.cloneBean(t);
-				((Auditable) t).setOrig(orig);
-				copyComponentProps(orig, t);
-			} catch (Exception e) {
-				this.logger.error(ExceptionUtils.getStackTrace(e));
-				throw new RuntimeException(e);
-			}
-		}
+		
 		return t;
 	}
 

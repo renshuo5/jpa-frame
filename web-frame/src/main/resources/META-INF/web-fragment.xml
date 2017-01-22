@@ -66,7 +66,21 @@
 		<!-- <dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher> -->
 	</filter-mapping>
-	
+	<!-- 
+	<filter>
+        <filter-name>OpenSessionInViewFilter</filter-name>
+        <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+        <init-param>
+            <param-name>singleSession</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>OpenSessionInViewFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    -->
+    
 	<!-- 设置隐藏的method可以为方法 -->
  	<filter>
  		<filter-name>httpMethodFilter</filter-name>
