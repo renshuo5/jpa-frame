@@ -57,6 +57,9 @@ public class UserController {
 		
 		String renshuo = userService.getInfo();
 		System.out.println(renshuo);
+		return "user/list";
+		
+	}
 		
 	public String index(User user,Model model){
 		System.out.println("list");
