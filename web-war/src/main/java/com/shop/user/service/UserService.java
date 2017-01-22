@@ -16,6 +16,14 @@ public class UserService extends BaseService<User> {
 	@Autowired
 	private UserDao userDao;
 	
+	@Autowired
+	private String renshuo;
+	
+	public String getInfo(){
+		return renshuo;
+	}
+	
+	
 	@Override
 	protected PagingAndSortingRepository<User, Long> getDao() {
 		return userDao;
