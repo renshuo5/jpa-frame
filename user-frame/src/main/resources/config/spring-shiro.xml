@@ -75,7 +75,7 @@
 			</value>
 		</property>
 	</bean>
-
+	<bean id="shiroTags" class="com.rensframework.core.freemarker.shiro.ShiroTags" />
 	<!-- 开启Shiro的注解(如@RequiresRoles，@RequiresPermissions)，需借助SpringAOP扫描使用Shiro注解的类， 
 		并在必要时进行安全逻辑验证 -->
 	<!-- <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"></bean> 
