@@ -11,7 +11,7 @@
     <jmxConfigurator ></jmxConfigurator>
      
     <!-- 定义日志文件 输出位置 -->
-    <property name="log_dir" value="/home/renshuo/log" ></property>
+    <property name="log_dir" value="/home/pykj/logs" ></property>
      
     <!-- 日志最大的历史 30天 -->
     <property name="maxHistory" value="30" ></property> 
@@ -130,7 +130,12 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger - %msg%n</pattern>
         </encoder>
     </appender>
-     
+    <!-- 
+    <logger name="org.hibernate.engine.internal" level="OFF"> 
+    	<appender-ref ref="console" />
+    </logger>
+     -->
+     <logger name="org.hibernate.engine.internal" level="OFF" /> 
     <!-- root级别   DEBUG -->
     <root>
         <!-- 打印debug级别日志及以上级别日志 -->

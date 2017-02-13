@@ -82,6 +82,8 @@
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
 	
+	<!-- 设置shirotags freemarker -->
+	
 	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">  
 		<property name="defaultEncoding" value="UTF-8" />
         
@@ -106,6 +108,12 @@
         </property>
         <!-- 当模板路径为多个时，加入此属性，否则报错，提示找不到templateLoaderPaths，ftl模板路径 -->
         <property name="preferFileSystemAccess" value="false" />
+        
+        <property name="freemarkerVariables">
+        	<map>
+        		<entry key="shiro" value-ref="shiroTags" />
+        	</map>
+        </property>
     </bean>
     <!-- lazy 解决方案 -->
     <mvc:interceptors>

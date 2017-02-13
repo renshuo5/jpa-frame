@@ -7,9 +7,7 @@
     <artifactId>jpa-frame</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.rens.jpa</groupId>
   <artifactId>rens-common</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>rens-common</name>
   <url>http://maven.apache.org</url>
   <properties>

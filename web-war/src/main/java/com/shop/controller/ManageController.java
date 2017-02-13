@@ -13,7 +13,6 @@ import com.rensframework.core.entity.user.User;
 @Controller
 public class ManageController {
 	protected final Logger logger = LoggerFactory.getLogger(getClass());
-	
 	@RequestMapping({"/"})
 	public String login(Model model){
 		logger.info("ManageController终于有日志啦");
